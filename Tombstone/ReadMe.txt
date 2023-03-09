@@ -12,7 +12,7 @@ The "Really" settings are what i decided to setup so that we could run the scrip
 
 I would highly recommend running it in the logging mode for a few weeks just to see if everything is gonna blow up. once you decide to put it into production, I would clear all of the entries in the CSV for the BL keys and the OU logging CSV. I also setup security on the "Secure" folder so that only my team and our InfoSec team could access it and placed the ps1 itself in that secure folder so no one gets in it and messes anything up. I also setup a 24 hour delay on moving devices into tombstone and setting them as disabled. the reason being, we give our SCCM environment a chance to see that those machines are moved into the tombstone folder and we stop running any inventories on them when they become tombstoned. the script uses the "disabled" CSV from the previous day to get the list of the machines to disable on the current run. this may cause some confusion or issues if you're not aware of it.
 
-lastly, the script itself has a few variables you will need to setup for your environment. if you do a search for % it will take you to the variables as well as what the expected info would be.
+The script itself has a few variables you will need to setup for your environment. if you do a search for % it will take you to the variables as well as what the expected info would be.
 
 we keep all of our endpoints in an OU called "Workstations" and we put our Tombstone OU in there as well. we have an OU called SCCM which is our "default" OU for machines that get imaged from SCCM and that is also inside the workstations OU.
 
