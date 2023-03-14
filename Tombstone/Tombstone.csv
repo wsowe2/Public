@@ -1,1 +1,3 @@
 Name,DistinguishedName,Enabled,OriginalOU,IPv4Address,LastLogonDate,Modified,ObjectGUID,OperatingSystem,OperatingSystemVersion,SID
+Test,"OU=Test,DC=test,DC=com",FALSE,,,1/1/2020 2:01,1/2/2020 12:00,11111111-2222-3333-4444-555555555555,Windows 10 Enterprise,10.0 (18363),S-1-5-21-1234567890-1234567890-123456
+Test2,"OU=Test,DC=test,DC=com",FALSE,,,1/1/2020 14:01,1/2/2020 12:01,11111111-2222-3333-4444-555555555556,Windows 10 Enterprise,10.0 (18363),S-1-5-21-1234567890-1234567890-123457

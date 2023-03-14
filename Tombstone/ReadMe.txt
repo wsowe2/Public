@@ -17,3 +17,7 @@ The script itself has a few variables you will need to setup for your environmen
 we keep all of our endpoints in an OU called "Workstations" and we put our Tombstone OU in there as well. we have an OU called SCCM which is our "default" OU for machines that get imaged from SCCM and that is also inside the workstations OU.
 
 Lastly there's an EXCLUDE OUs text file that you can put the DN of an OU on each individual line. the script will pass over that OU and anything below it and won't look for machines to be disabled/deleted. We have a few OUs that needed to be excluded from the process and we have used it a few times to temporarily take a location out of the process because the facilities were damaged.
+
+Added:
+The Tombstone.csv file that is used for logging the previous OUs of tombstoned objects will not import as empty or a single line. i have updated the files with a Tombsatone.csv file that has 2 "test" entries in it so it will import as an arraylist. please make sure to delete those 2 entries when you populate with your own info or add 2 if you wipe the file before putting it into prod and use the same process for deleting those 2 test entries.
+This also affects the BLKey file to a degree. I have added a dummy entry to the BLKEY file as well. Make sure and delete the Test entry when you populate it.
